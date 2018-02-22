@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- this meta tag tells the browser to use the unicode character set -->
+  <!-- so u can use characters beyond the ones found in ur keyboard,  -->
+  <!-- for ex: ñ, 悆 or ☺  -->
+  <meta charset="utf-8" />
+  <!-- this meta tag is a description of ur page -->
+  <!-- it shows up in search results or when shared on social media -->
+  <meta name="description" content="My cool website!">
+
+  <meta name="author" content="Alex Cusseaux">
+  <!-- this is so ur page looks good on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- this is for the little icon that shows up in the browser tab -->
+  <!-- this assumes u have a file called "favicon.ico" -->
+  <link rel="icon" type="image/x-icon"  href="images/Me.jpg">
+  <!-- all above is from http://m3t4.media/notes/html-css.html -->
+
+  <link rel="stylesheet" type="text/css" href="PropperStyleSheet.css">
+  <title>My Written Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div class="topnav">
+  <!-- <a class="active" href="#home">Home</a> -->
+  <a href="gallery.html">Gallery</a>
+  <a href="Documentation.html">Documentation</a>
+  
+  <a href="index.html">About</a>
+</div>
+
+<div class="lines">
+  <div class="column">
+    <img id = " bark" src="images/bark.jpg" style="width: 100%" onclick="modal('images/bark.jpg')">
+    <img src="images/skull3D.jpg" style="width: 100%" onclick="modal('images/skull3D.jpg')">
+    <img src="images/pile.jpg" style="width: 100%"onclick="modal('images/pile.jpg')">
+    <img src="images/moss.jpg" style="width: 100%"onclick="modal('images/moss.jpg')">
+  </div>
+
+  <div class="column">
+    <img id = "oilpaint" src="images/oilpaint.jpg" style="width: 100%" onclick="modal('images/oilpaint.jpg')">
+    <img src="images/cut.jpg" style="width: 100%" onclick="modal('images/cut.jpg')">
+    <img src="images/wire.jpg" style="width: 100%" onclick="modal('images/wire.jpg')">
+    <img src="images/spike.jpg" style="width: 100%" onclick="modal('images/spike.jpg')">
+  </div>
+
+  <div class="column">
+    <img id = "bookmoss" rc="images/bookmoss.jpg" style="width: 100%" onclick="modal('images/bookmoss.jpg')">
+    <img src="images/skullSketch.jpg" style="width: 100%" onclick="modal('images/skullSketch.jpg')">
+    <img src="images/dry.jpg" style="width: 100%" onclick="modal('images/dry.jpg')">
+    <img src="images/fast.jpg" style="width: 100%" onclick="modal('images/fast.jpg')">
+  </div>
+
+  <div class="column">
+    <img src="images/skullbook.jpg" style="width: 100%" onclick="modal('images/skullbook.jpg')">
+    <img src="images/frog.jpg" style="width: 100%" onclick="modal('images/frog.jpg')">
+    <img src="images/rip.jpg" style="width: 100%" onclick="modal('images/rip.jpg')">
+    <img src="images/book.jpg" style="width: 100%" onclick="modal('images/book.jpg')">
+
+  </div>
+</div>
+
+<!-- The Modal -->
+ <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+
+function modal(mysrc){
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById('modalImg');
+modal.style.display = "block";
+modalImg.src = mysrc;
+
+
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+}
+</script>
+
+
+
+
+</html>
